@@ -135,18 +135,7 @@ $url5= '  https://api.fiewin.com/fiewin/api/user/sms   ';
  
 $data5='{ "phone":".$mobb"} ;
 
-$headers5=['Content-length: '.strlen($data5).'','Content-Type: application/json','Host: '
-.$host.'','Connection: Keep-Alive'];
-
- $ch = curl_init();
-  curl_setopt($ch, CURLOPT_URL,$url5);
-  curl_setopt($ch, CURLOPT_POSTFIELDS, $data5);
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-     curl_setopt($ch, CURLOPT_HTTPHEADER,$headers5);
-  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-  $output= curl_exec ($ch);
-  $json=json_decode($output,true);
-  $send = $json['errorMessage'];
+$headers5=['Content-length: 
   
   curl_close ($ch);
   
